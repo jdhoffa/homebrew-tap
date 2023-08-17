@@ -2,7 +2,7 @@ class PactaCli < Formula
   desc "A CLI for PACTA for Investors"
   homepage "https://github.com/jdhoffa/pacta-cli"
   url "https://github.com/jdhoffa/pacta-cli/archive/refs/tags/v0.0.1.tar.gz"
-  sha256 "78c8d6d8bcf3616f201fa6eff0d543c759bfa806a78f59e5846a0181ec197689"
+  sha256 "7b27f89f1df5c5c4600c0a40048abf268db388fcac9df095f6211261ab801f59"
 
   depends_on "rust" => :build
   depends_on "docker" => :build
