@@ -8,13 +8,8 @@ class PactaCli < Formula
   depends_on "docker" => :build
 
   def install
-    system "cargo", "install", "--locked", "--path", "."
-
-    # Create a wrapper script for the CLI
-    (bin/"pacta-cli").write <<~EOS
-      #!/bin/bash
-      "#{bin}/cargo" run --release --
-    EOS
+    system "cargo", "build", "--release", "--bin", "pacta-cli"
+    bin.install "target/release/pacta-cli"
   end
 
   test do
