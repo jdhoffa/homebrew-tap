@@ -13,7 +13,7 @@ class PactaCli < Formula
     # Create a wrapper script for the CLI
     (bin/"pacta-cli").write <<~EOS
       #!/bin/bash
-      exec "#{bin}/cargo run --release --"
+      "#{bin}/cargo" run --release --
     EOS
   end
 
